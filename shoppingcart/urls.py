@@ -1,4 +1,5 @@
 from django.urls import path, include
+import debug_toolbar
 """
 URL configuration for shoppingcart project.
 
@@ -20,5 +21,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("itemscanner/", include("itemscanner.urls"))
+    path("itemscanner/", include("itemscanner.urls")),
+    path("__debug__/", include(debug_toolbar.urls))
 ]
